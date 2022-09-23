@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <div class="draggable">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Colour tool</title>
+  </head>
+  <body>
+    <h1>Pick a colour</h1>
+    <div id="colour" class="colourBox"></div> 
+    <div class="slidecontainer">
+        <input type="range" min="1" max="255" value="50" class="slider" id="red">
+    </div>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="255" value="50" class="slider" id="green">
+    </div>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="255" value="50" class="slider" id="blue">
+    </div>
+
+    <script>
+        const r_slider = document.getElementById("red");
+        const g_slider = document.getElementById("green");
+        const b_slider = document.getElementById("blue");
+        const colour = document.getElementById("colour");
+
+        function changeColour() {
+            let red = r_slider.value;
+            let green = g_slider.value;
+            let blue = b_slider.value;
+
+            colour.style.backgroundColor = "rgb("+red +","+green+","+blue+")";
+            console.log("hmmmm");
+        }
+
+        r_slider.addEventListener("input", changeColour);
+        g_slider.addEventListener("input", changeColour);
+        b_slider.addEventListener("input", changeColour);
+    </script>
+  </body>
+  </div>
+</html>
