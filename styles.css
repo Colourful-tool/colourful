@@ -1,9 +1,14 @@
 body {
     padding: 500;
 }
+h2 {
+    -webkit-user-select: all;
+    user-select: all;
+}
 .colourBox {
     width:100px;
     height:100px;
+    background-color: black;
 }
 .draggable {
     -webkit-user-select: none;

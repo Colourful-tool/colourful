@@ -10,35 +10,61 @@
   </head>
   <body>
     <h1>Pick a colour</h1>
+    <h2><span id="HexColour"></span></h2>
     <div id="colour" class="colourBox"></div> 
     <div class="slidecontainer">
-        <input type="range" min="1" max="255" value="50" class="slider" id="red">
+        <label>Red</label>
+        <input type="range" min="0" max="255" value="0" class="slider" id="red">
     </div>
     <div class="slidecontainer">
-        <input type="range" min="1" max="255" value="50" class="slider" id="green">
+        <label>Green</label>
+        <input type="range" min="0" max="255" value="0" class="slider" id="green">
     </div>
     <div class="slidecontainer">
-        <input type="range" min="1" max="255" value="50" class="slider" id="blue">
+        <label>Blue</label>
+        <input type="range" min="0" max="255" value="0" class="slider" id="blue">
+    </div>
+    <div class="slidecontainer">
+        <label>Alpha</label>
+        <input type="range" min="0" max="100" value="100" class="slider" id="alpha">
     </div>
 
     <script>
         const r_slider = document.getElementById("red");
         const g_slider = document.getElementById("green");
         const b_slider = document.getElementById("blue");
+        const a_slider = document.getElementById("alpha");
         const colour = document.getElementById("colour");
 
         function changeColour() {
             let red = r_slider.value;
             let green = g_slider.value;
             let blue = b_slider.value;
+            let alpha = a_slider.value / 100;
 
-            colour.style.backgroundColor = "rgb("+red +","+green+","+blue+")";
-            console.log("hmmmm");
+            // Using: https://css-tricks.com/converting-color-spaces-in-javascript/
+            let r = red.toString(16);
+            let g = green.toString(16);
+            let b = blue.toString(16);
+            let a = Math.round(alpha * 255).toString(16);
+
+            if (r.length == 1)
+                r = "0" + r;
+            if (g.length == 1)
+                g = "0" + g;
+            if (b.length == 1)
+                b = "0" + b;
+            if (a.length == 1)
+                a = "0" + a;
+                
+            colour.style.backgroundColor = "rgba("+red +","+green+","+blue+","+alpha+")";
+            document.getElementById("HexColour").innerHTML = "#" + r + g + b + a;
         }
 
         r_slider.addEventListener("input", changeColour);
         g_slider.addEventListener("input", changeColour);
         b_slider.addEventListener("input", changeColour);
+        a_slider.addEventListener("input", changeColour);
     </script>
   </body>
   </div>
