@@ -25,9 +25,13 @@
         <label>Blue</label>
         <input type="range" min="0" max="255" value="0" class="slider" id="blue">
     </div>
+    <label>Alpha</label>
     <div class="slidecontainer">
-        <label>Alpha</label>
-        <input type="range" min="0" max="100" value="100" class="slider" id="alpha">
+        <span class="inline">
+          <input type="range" min="0" max="100" value="100" class="slider" id="alpha">
+          <input type="checkbox" id="switch" class="checkbox" />
+          <label for="switch" class="toggle"></label>
+        </span>
     </div>
 
     <script src="colour-change.js">
