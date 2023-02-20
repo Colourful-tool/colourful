@@ -20,13 +20,13 @@ function changeColour() {
             
         colourBox.style.backgroundColor =  `rgba(${red}, ${green}, ${blue}, ${alpha})`;
         
-        hexCode.innerHTML = "#" + c.toHex8();
+        hexCode.value = "#" + c.toHex8();
     } else {
         let c = tinycolor(`rgb (${red}, ${green}, ${blue})`);
             
         colourBox.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 
-        hexCode.innerHTML = "#" + c.toHex();
+        hexCode.value = "#" + c.toHex();
     }
 }
 
@@ -38,8 +38,20 @@ function toggleAlpha() {
     } else {
         useAlpha = true;
         document.getElementById("alpha").disabled = false;
+        changeColour();
     }
-    console.log(sw.value);
+}
+
+function copyHex() {
+    // Get the text field
+    let copyText = document.getElementById("HexColour");
+
+    // copy to clipboard
+    navigator.clipboard.writeText(copyText.value).then(function() {
+        console.log('Async: Copying to clipboard was successful!');
+    }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+    });
 }
 
 r_slider.addEventListener("input", changeColour);
@@ -50,4 +62,4 @@ a_slider.addEventListener("input", changeColour);
 sw.addEventListener("input", toggleAlpha);
 document.getElementById("alpha").disabled = true; // toggle starts out disabled
 
-hexCode.innerHTML = "#000000";
+hexCode.value = "#000000";

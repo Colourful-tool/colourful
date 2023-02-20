@@ -10,8 +10,11 @@
     <title>Colour tool</title>
   </head>
   <body>
-    <h1>Pick a colour</h1>
-    <h2><span id="HexColour"></span></h2>
+    <h2>Pick a colour</h2>
+    <div class="inline">
+      <h3><input type="text" id="HexColour" name="HexColour" class="defaultInput" value="#000000"></h3>
+      <button onclick="copyHex()">Copy</button>
+    </div> 
     <div id="colour" class="colourBox"></div> 
     <div class="slidecontainer">
         <label>Red</label>

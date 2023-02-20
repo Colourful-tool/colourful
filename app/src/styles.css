@@ -42,6 +42,15 @@ h2 {
     opacity: 0.4;
 }
 
+.defaultInput {
+    width: 100px;
+    height:25px;
+    padding: 1px;
+    font-size: medium;
+    border-color: white;
+    box-shadow: none;
+}
+
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
