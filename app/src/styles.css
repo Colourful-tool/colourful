@@ -18,6 +18,7 @@ h2 {
 /** Slider classes */
  .slidecontainer {
     width: 100%; /* Width of the outside container */
+    margin: 2px;
 }
   
 /* The slider itself */
@@ -42,12 +43,24 @@ h2 {
     opacity: 0.4;
 }
 
-.defaultInput {
+.bigInput {
     width: 100px;
     height:25px;
     padding: 1px;
-    font-size: medium;
-    border-color: white;
+    font-size: large;
+    border-color: grey;
+    border-radius: 5px;
+    border-width: 2px;
+    box-shadow: none;
+}
+
+.copyButton {
+    width: 100px;
+    border-color: #04AA6D;
+    background-color: #04AA6D;
+    border-radius: 5px;
+    border-width: 2px;
+    color: #fff;
     box-shadow: none;
 }
 
@@ -71,6 +84,13 @@ h2 {
 
 .inline {
     display: flex;
+    padding: 2px;
+}
+
+.spaced-inline {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
 }
 
 /* toggle in label designing */
@@ -81,7 +101,7 @@ h2 {
     height : 20px;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    border: 2px solid gray;
+    border: 2px solid #dca54f;
 }
        
 /* After slide changes */
@@ -91,7 +111,7 @@ h2 {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background-color: gray;
+    background-color: #dca54f;
     top: 1px;
     left: 1px;
     transition:  all 0.2s;
@@ -105,7 +125,7 @@ p {
        
 /* Checkbox checked effect */
 .checkbox:checked + .toggle::after {
-    left : 11px;
+    left : 15.5px;
 }
        
 /* Checkbox checked toggle label bg color */

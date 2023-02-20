@@ -7,15 +7,16 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.6.0/tinycolor.js" integrity="sha512-4zLVma2et+Ww6WRDMUOjjETyQpMsSLhFO+2zRrH/dmBNh2RRBQzRj89Ll2d5qL4HGFaxr7g9p+ggLjIImBYf9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Colour tool</title>
+    <title>Colourful</title>
   </head>
   <body>
-    <h2>Pick a colour</h2>
-    <div class="inline">
-      <h3><input type="text" id="HexColour" name="HexColour" class="defaultInput" value="#000000"></h3>
-      <button onclick="copyHex()">Copy</button>
-    </div> 
-    <div id="colour" class="colourBox"></div> 
+    <div class="spaced-inline">
+      <div id="colour" class="colourBox"></div> 
+      <div>
+        <h3><input type="text" id="HexColour" name="HexColour" class="bigInput" value="#000000"></h3>
+        <button onclick="copyHex()" class="copyButton">Copy</button>
+      </div> 
+    </div>
     <div class="slidecontainer">
         <label>Red</label>
         <input type="range" min="0" max="255" value="0" class="slider" id="red">
@@ -28,13 +29,14 @@
         <label>Blue</label>
         <input type="range" min="0" max="255" value="0" class="slider" id="blue">
     </div>
-    <label>Alpha</label>
     <div class="slidecontainer">
         <span class="inline">
-          <input type="range" min="0" max="100" value="100" class="slider" id="alpha">
+          <label>Alpha</label>
+          <span style="margin: 10px"></span>
           <input type="checkbox" id="switch" class="checkbox" />
           <label for="switch" class="toggle"></label>
         </span>
+        <input type="range" min="0" max="100" value="100" class="slider" id="alpha">
     </div>
 
     <script src="colour-change.js">

@@ -1,4 +1,4 @@
-# colour-tool
+# colourful
 A super simple colour picking tool made using electron.  
 
 Inspired by Toinane/colorpicker and the google online colour picker which disappears when I need it most.  
