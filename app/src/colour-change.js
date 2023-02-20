@@ -54,11 +54,20 @@ function copyHex() {
     });
 }
 
+function updateSliders() {
+    let c = tinycolor(hexCode.value).toRgb();
+    r_slider.value = c.r;
+    g_slider.value = c.g;
+    b_slider.value = c.b;
+    colourBox.style.backgroundColor = `rgb(${c.r}, ${c.g}, ${c.b})`;
+}
+
 r_slider.addEventListener("input", changeColour);
 g_slider.addEventListener("input", changeColour);
 b_slider.addEventListener("input", changeColour);
 a_slider.addEventListener("input", changeColour);
 
+hexCode.addEventListener("input", updateSliders);
 sw.addEventListener("input", toggleAlpha);
 document.getElementById("alpha").disabled = true; // toggle starts out disabled
 
