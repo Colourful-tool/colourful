@@ -9,10 +9,12 @@ Start the application by running `npm start`
 To build the application yourself, run `npm run make`
 
 ## Releases  
-20/02/23: Version 1.0.0! 
+20/02/23: Version 1.0.0!  
 09/09/23: Version 1.5.0 
 
-![image](https://user-images.githubusercontent.com/66296587/220074489-06fc57b2-53d5-4e03-a5ee-f19bffb44339.png)  
+![image](https://github.com/cucumber-turtle/colourful/assets/66296587/dc44315d-50cc-4d18-87da-87d113ea1a23)
+
+
 - Change the colour manually using the input box.   
 - Copy the hexcode when you need it by clicking the "copy" button.  
 - Use the sliders to get the colour you want.  
