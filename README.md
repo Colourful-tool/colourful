@@ -23,7 +23,6 @@ To build the application yourself, run `npm run make`
 ## Goals:
 - [ ] Filter user input
 - [ ] Add hsl square colour picking map
-- [ ] Add RGB input boxes
 ### Future goals:
 - Colour history
 - Adding a colour wheel
