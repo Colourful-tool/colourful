@@ -9,7 +9,8 @@ Start the application by running `npm start`
 To build the application yourself, run `npm run make`
 
 ## Releases  
-20/02/23: Version 1.0.0!  
+20/02/23: Version 1.0.0! 
+09/09/23: Version 1.5.0 
 
 ![image](https://user-images.githubusercontent.com/66296587/220074489-06fc57b2-53d5-4e03-a5ee-f19bffb44339.png)  
 - Change the colour manually using the input box.   

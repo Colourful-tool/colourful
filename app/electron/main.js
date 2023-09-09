@@ -6,7 +6,8 @@ const createWindow = () => {
       height:350,
       hideMenuBar: true,
       titleBarOverlay: true,
-      resizable: false
+      resizable: false,
+      icon: 'app/resources/colourful-logo.png',
     })
 
     win.removeMenu()

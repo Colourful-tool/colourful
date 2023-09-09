@@ -7,6 +7,10 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.6.0/tinycolor.js" integrity="sha512-4zLVma2et+Ww6WRDMUOjjETyQpMsSLhFO+2zRrH/dmBNh2RRBQzRj89Ll2d5qL4HGFaxr7g9p+ggLjIImBYf9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="controls/bind-events.js"></script>
+    <script src="controls/colour-change.js"></script>
+    <script src="controls/update-changes.js"></script>
+    <script src="controls/text-change.js"></script>
     <title>Colourful</title>
   </head>
   <body>
@@ -19,28 +23,36 @@
     </div>
     <div class="slidecontainer">
         <label>Red</label>
-        <input type="range" min="0" max="255" value="0" class="slider" id="red">
+        <span class="inline">
+          <input type="range" min="0" max="255" value="0" class="slider" id="red">
+          <input id="r-t" type="text" name="HexColour" class="smallInput" value="0">
+        </span>
     </div>
     <div class="slidecontainer">
         <label>Green</label>
-        <input type="range" min="0" max="255" value="0" class="slider" id="green">
+        <span class="inline">
+          <input type="range" min="0" max="255" value="0" class="slider" id="green">
+          <input id="g-t" type="text" name="HexColour" class="smallInput" value="0">
+        </span>
     </div>
     <div class="slidecontainer">
         <label>Blue</label>
-        <input type="range" min="0" max="255" value="0" class="slider" id="blue">
+        <span class="inline">
+          <input type="range" min="0" max="255" value="0" class="slider" id="blue">
+          <input id="b-t" type="text" name="HexColour" class="smallInput" value="0">
+        </span>
     </div>
     <div class="slidecontainer">
         <span class="inline">
           <label>Alpha</label>
-          <span style="margin: 10px"></span>
           <input type="checkbox" id="switch" class="checkbox" />
           <label for="switch" class="toggle"></label>
         </span>
-        <input type="range" min="0" max="100" value="100" class="slider" id="alpha">
+        <span class="inline">
+          <input type="range" min="0" max="100" value="100" class="slider" id="alpha">
+          <input id="a-t" type="text" name="HexColour" class="smallInput" value="100">
+        </span>
     </div>
-
-    <script src="colour-change.js">
-    </script>
   </body>
   </div>
 </html>
